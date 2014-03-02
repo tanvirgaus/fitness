@@ -13,12 +13,12 @@ class User extends AppModel {
         )
     );
 	
-	// public $hasOne = array(
-        // 'MedicalsUser' => array(
-            // 'className' => 'MedicalsUser',
-            // 'foreignKey' => 'user_id'
-        // )
-    // );
+	public $hasMany = array(
+        'MedicalsUser' => array(
+            'className' => 'MedicalsUser',
+            'foreignKey' => 'user_id'
+        )
+    );
 	
 	public function beforeSave($options = array()) {
 	    if (isset($this->data[$this->alias]['password'])) {

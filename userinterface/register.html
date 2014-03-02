@@ -64,10 +64,13 @@
 		function callbackresult(data) {
 //alert(data.data.data[1].Medical.name);
 console.log(data.data);
- var item = data.data.data[1].Medical.name;
+ var item = data.data.data;
+ //[1].Medical.name;
  var $inputs = $('#register input.medical-list[type="text"]');
  var values = {};
  var field_name = '';
+
+var count = 0;
 
  $inputs.each(function() {
 
@@ -79,9 +82,9 @@ console.log(data.data);
   name = name[2].split(']');
   name = name[0];
 
-  field_name = item[name];
+  //field_name = item[name];
 
-  $(this).val(field_name);
+  $(this).val(item[count++].Medical.name);
 
  });
 
@@ -172,7 +175,7 @@ console.log(data.data);
 							<div class="icon-ph">
 								<i class='icon-user'></i>
 							</div>
-							<input class="custom-text medical-list" type="text" placeholder="D Name" name="data[Profile][mobile]" data-role="none">
+							<input class="custom-text medical-list" type="text" placeholder="D Name" name="data[MedicalsUser][medical_id]" data-role="none">
 						</div>
                         <div class='input-container'>
 							<div class="icon-ph">

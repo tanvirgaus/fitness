@@ -9,6 +9,11 @@ class MedicalsUser extends AppModel {
         'User' => array(
             'className' => 'User',
             'foreignKey' => 'user_id'
+        ),
+        'Medical' => array(
+            'className' => 'Medical',
+            'foreignKey' => 'medical_id'
         )
     );
+	
 }

@@ -363,7 +363,7 @@ cursor: pointer;
     height: 40px;
     margin-bottom: 10px;
     padding-left: 60px;
-    width: 90%;
+    width: 87%;
 }
 .input-container button[type=submit], .input-container select,.input-container input[type=button]{
 	width:100%; 

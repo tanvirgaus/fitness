@@ -12,5 +12,12 @@ class Medical extends AppModel {
  * @var string
  */
 	public $displayField = 'name';
+	
+	public $hasMany = array(
+        'MedicalsUser' => array(
+            'className' => 'MedicalsUser',
+            'foreignKey' => 'medical_id'
+        )
+    );
 
 }
